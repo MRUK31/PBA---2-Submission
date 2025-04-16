@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Profile | CodeNest</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/auth.js"></script>
+</head>
+<body onload="loadProfile()">
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🪺 CodeNest</div>
+    <input type="text" placeholder="Search topic..." class="search-bar">
+    <div class="profile" onclick="window.location.href='profile.html'">👤</div>
+  </header>
+
+  <div class="profile-page">
+    <button class="back-button" onclick="window.history.back()">← Back</button>
+    <div class="profile-card">
+      <h2>User Profile</h2>
+      <input type="password" placeholder="Enter your password to view details" id="verifyPass">
+      <button onclick="unlockProfile()">Unlock</button>
+
+      <div id="profileInfo" style="display:none;">
+        <img src="https://via.placeholder.com/150" alt="Profile Picture" class="profile-picture">
+        <p><strong>Name:</strong> <span id="name"></span></p>
+        <p><strong>Email:</strong> <span id="email"></span></p>
+        <p><strong>Username:</strong> <span id="username"></span></p>
+        <button onclick="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function loadProfile() {
+      if (!getCurrentUser()) window.location.href = 'login.html';
+    }
+
+    function unlockProfile() {
+      const enteredPass = document.getElementById('verifyPass').value;
+      if (validatePassword(enteredPass)) {
+        const user = getCurrentUser();
+        document.getElementById('name').innerText = user.name;
+        document.getElementById('email').innerText = user.email;
+        document.getElementById('username').innerText = user.username;
+        document.getElementById('profileInfo').style.display = 'block';
+      } else {
+        alert("Incorrect password!");
+      }
+    }
+  </script>
+</body>
+</html>
+

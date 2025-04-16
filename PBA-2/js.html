@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Learn JavaScript - CodeNest</title>
+  <link rel="stylesheet" href="styles/topicStyles.css">
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🪺</span>
+      <span class="logo-text">CodeNest</span>
+    </a>
+    <div class="title">JavaScript</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <div class="main-content">
+  <div class="sidebar">
+    <ul>
+      <li onclick="loadTopic('intro')">Introduction</li>
+      <li onclick="loadTopic('variables')">Variables</li>
+      <li onclick="loadTopic('functions')">Functions</li>
+      <li onclick="loadTopic('dom')">DOM Manipulation</li>
+      <li onclick="loadTopic('events')">Events</li>
+    </ul>
+  </div>
+
+  <div class="content" id="contentArea">
+    <p>Select a JS topic to read.</p>
+  </div>
+
+</div>
+
+  <script src="scripts/topicData.js"></script>
+  <script src="scripts/topicLoader.js"></script>
+</body>
+</html>
+

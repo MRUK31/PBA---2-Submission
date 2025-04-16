@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CodeNest</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/auth.js"></script>
+  <link rel="stylesheet" href="styles/footer.css">
+  <script>
+    function handleSearch(event) {
+      if (event.key === 'Enter') {
+        const query = event.target.value.trim();
+        if (query) {
+          window.location.href = `search.html?query=${encodeURIComponent(query)}`;
+        }
+      }
+    }
+  </script>
+</head>
+<body onload="checkLogin()">
+  <header class="index-header">
+    <div class="logo">🪺 CodeNest</div>
+    <input 
+      type="text" 
+      placeholder="Search topic..." 
+      class="search-bar" 
+      onkeypress="handleSearch(event)">
+    <div class="profile" onclick="window.location.href='profile.html'">👤</div>
+  </header>
+
+  <div class="Theory">
+    <h2>What is CodeNest?</h2>
+    <p>CodeNest is a platform designed to help you learn programming languages and web development technologies in an interactive way. Whether you're a beginner or looking to enhance your skills, CodeNest has something for everyone.</p>
+    <p>We offer a variety of topics including HTML, CSS, JavaScript, and more. Each topic is designed to provide you with the knowledge and skills you need to succeed in your coding journey.</p>
+    <p>Join us today and start your learning adventure!</p>
+  </div> 
+
+  <main>
+    <h2>What do you want to start learning?</h2>
+    <div class="topic-buttons">
+      <a href="htmllec.html"><div class="topic"><img src="https://assets.onecompiler.app/436w5wsnq/43esnttq2/html1.png"></div></a>
+      <a href="css.html"><div class="topic"><img src="https://assets.onecompiler.app/436w5wsnq/43esnttq2/Screenshot%202025-04-14%20at%202.42.32%E2%80%AFPM.png"></div></a>
+      <a href="js.html"><div class="topic"><img src="https://assets.onecompiler.app/436w5wsnq/43esz3mt6/Screenshot%202025-04-14%20at%205.12.29%E2%80%AFPM.png"></div></a>
+    </div>
+
+    
+
+    <div class="reviews-section">
+      <h2>What Our Users Say</h2>
+      <div class="reviews-container">
+        <div class="review">
+          <p>"CodeNest is amazing! I learned so much in just a few weeks."</p>
+          <p><strong>- Alice</strong></p>
+        </div>
+        <div class="review">
+          <p>"The interactive lessons are very engaging and easy to follow."</p>
+          <p><strong>- Bob</strong></p>
+        </div>
+        <div class="review">
+          <p>"I love the clean design and the variety of topics available."</p>
+          <p><strong>- Charlie</strong></p>
+        </div>
+        <div class="review">
+          <p>"CodeNest helped me land my first job as a web developer!"</p>
+          <p><strong>- Diana</strong></p>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>About CodeNest</h3>
+        <p>CodeNest is your go-to platform for learning web development and programming interactively. Join us and start your coding journey today!</p>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Us</h3>
+        <p>Email: support@codenest.com</p>
+        <p>Phone: +1-234-567-890</p>
+      </div>
+      <div class="footer-section">
+        <h3>Follow Us</h3>
+        <div class="social-icons">
+          <a href="https://facebook.com" target="_blank">Facebook</a> |
+          <a href="https://twitter.com" target="_blank">Twitter</a> |
+          <a href="https://instagram.com" target="_blank">Instagram</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2025 CodeNest. All rights reserved.</p>
+    </div>
+  </footer>
+</body>
+</html>

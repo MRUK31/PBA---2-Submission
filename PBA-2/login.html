@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login | CodeNest</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/auth.js"></script>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="logo">🪺 CodeNest</div>
+  </header>
+
+  <div class="auth-container">
+    <h2 id="formTitle">Login to CodeNest</h2>
+    <form onsubmit="handleSubmit(event)">
+      <input type="text" id="name" placeholder="Name" style="display:none;">
+      <input type="email" id="email" placeholder="Email" style="display:none;">
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button type="submit">Submit</button>
+    </form>
+    <p id="toggleForm" onclick="toggleMode()">Don't have an account? Register</p>
+  </div>
+
+  <script>
+    let isRegister = false;
+
+    function toggleMode() {
+      isRegister = !isRegister;
+      document.getElementById('formTitle').innerText = isRegister ? "Register on CodeNest" : "Login to CodeNest";
+      document.getElementById('toggleForm').innerText = isRegister ? "Already have an account? Login" : "Don't have an account? Register";
+      document.getElementById('name').style.display = isRegister ? "block" : "none";
+      document.getElementById('email').style.display = isRegister ? "block" : "none";
+    }
+
+    function handleSubmit(e) {
+      e.preventDefault();
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+
+      if (isRegister) {
+        if (register(name, email, username, password)) {
+          window.location.href = "index.html";
+        }
+      } else {
+        if (login(username, password)) {
+          window.location.href = "index.html";
+        }
+      }
+    }
+  </script>
+</body>
+</html>
+
+

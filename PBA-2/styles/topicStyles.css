@@ -1,0 +1,101 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column; /* Stack header on top */
+  height: 100vh; /* Full height for the body */
+}
+
+/* Header - horizontal top layout */
+.main-header {
+  background-color: #1e1e2f;
+  color: white;
+  padding: 15px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
+
+/* Logo */
+.logo {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  color: white;
+  font-size: 22px;
+  font-weight: bold;
+  gap: 10px;
+}
+
+.logo:hover {
+  opacity: 0.8;
+}
+
+.logo-icon {
+  font-size: 26px;
+}
+
+/* Profile */
+.profile-icon img {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+/* Main content area */
+.main-content {
+  display: flex; /* Use flexbox for sidebar and content */
+  flex-grow: 1; /* Allow it to grow and fill the space */
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #f0f0f0;
+  padding: 20px;
+  height: 100%; /* Full height of the parent */
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar li {
+  padding: 10px;
+  margin-bottom: 10px;
+  background: white;
+  cursor: pointer;
+  border-radius: 6px;
+}
+
+.sidebar li:hover {
+  background: #ddd;
+}
+
+/* Content */
+.content {
+  padding: 30px;
+  flex-grow: 1; /* Allow content to grow and fill the remaining space */
+  background: #fff;
+}
+
+/* Preformatted text */
+pre {
+  background: #eee;
+  padding: 10px;
+  border-radius: 5px;
+  overflow-x: auto;
+}
