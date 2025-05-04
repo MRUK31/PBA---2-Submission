@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn HTML - CodeNest</title>
+  <link rel="stylesheet" href="styles/topicStyles.css">
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🪺</span>
+      <span class="logo-text">CodeNest</span>
+    </a>
+    <div class="title">HTML</div>
+    <div class="profile">👤</div>
+  </header>
+
+  <div class="main-content">
+  <div class="sidebar">
+    <ul>
+      <li onclick="loadTopic('intro_html')">Introduction</li>
+      <li onclick="loadTopic('tags_html')">Basic Tags</li>
+      <li onclick="loadTopic('forms_html')">Forms</li>
+      <li onclick="loadTopic('tables_html')">Tables</li>
+      <li onclick="loadTopic('semantic_html')">Semantic Elements</li>
+    </ul>
+  </div>
+
+  <div class="content" id="contentArea">
+    <p>Select a topic to read.</p>
+  </div>
+
+</div>
+
+  <script src="scripts/topicData.js"></script>
+  <script src="scripts/topicLoader.js"></script>
+</body>
+</html>
+

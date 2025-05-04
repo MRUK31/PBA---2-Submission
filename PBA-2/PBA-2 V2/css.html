@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn CSS - CodeNest</title>
+  <link rel="stylesheet" href="styles/topicStyles.css">
+</head>
+<body>
+  <header class="main-header">
+    <a href="index.html" class="logo">
+      <span class="logo-icon">🪺</span>
+      <span class="logo-text">CodeNest</span>
+    </a>
+    <div class="title">CSS</div>
+    <a href="profile.html" class="profile">👤</a>
+  </header>
+
+  <div class="main-content">
+  <div class="sidebar">
+    <ul>
+      <li onclick="loadTopic('intro_css')">Introduction</li>
+      <li onclick="loadTopic('selectors_css')">Selectors</li>
+      <li onclick="loadTopic('boxmodel_css')">Box Model</li>
+      <li onclick="loadTopic('flexbox_css')">Flexbox</li>
+      <li onclick="loadTopic('media_css')">Responsive Design</li>
+    </ul>
+  </div>
+
+  <div class="content" id="contentArea">
+    <p>Select a CSS topic to read.</p>
+  </div>
+
+</div>
+
+  <script src="scripts/topicData.js"></script>
+  <script src="scripts/topicLoader.js"></script>
+</body>
+</html>
+

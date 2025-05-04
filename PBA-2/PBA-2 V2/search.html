@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CodeNest</title>
+  <link rel="stylesheet" href="styles/style.css">
+  <script src="scripts/auth.js"></script>
+  <link rel="stylesheet" href="styles/footer.css">
+</head>
+
+    <header class="index-header">
+      <div class="logo">🪺 CodeNest</div>
+      <input type="text" placeholder="Search topic..." class="search-bar">
+      <div class="profile" onclick="window.location.href='profile.html'">👤</div>
+    </header>
+
+<body>
+
+    <div class = "search-results" id="search-results">
+        <h2>Search Results</h2>
+        
+        <div class="result-item">
+            <h3><a href="htmllec.html">HTML</a></h3>
+            <p>Learn the basics of HTML, the standard markup language for creating web pages.</p>
+        </div>
+        <div class="result-item">
+            <h3><a href="css.html">CSS</a></h3>
+            <p>Discover how to style your web pages with CSS, the language used to describe the presentation of a document.</p>
+        </div>
+        <div class="result-item">
+            <h3><a href="js.html">JavaScript</a></h3>
+            <p>Dive into JavaScript, the programming language that brings interactivity to your web pages.</p>
+        </div>
+        
+
+    <footer>
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>About CodeNest</h3>
+            <p>CodeNest is your go-to platform for learning web development and programming interactively. Join us and start your coding journey today!</p>
+          </div>
+          <div class="footer-section">
+            <h3>Contact Us</h3>
+            <p>Email: support@codenest.com</p>
+            <p>Phone: +1-234-567-890</p>
+          </div>
+          <div class="footer-section">
+            <h3>Follow Us</h3>
+            <div class="social-icons">
+              <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a> |
+              <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a> |
+              <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+            </div>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CodeNest. All rights reserved.</p>
+        </div>
+      </footer>
+    </body>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const urlParams = new URLSearchParams(window.location.search);
+        const query = urlParams.get('query')?.toLowerCase();
+    
+        if (query) {
+          const results = document.querySelectorAll('.result-item');
+          let hasResults = false;
+    
+          results.forEach(result => {
+            const title = result.querySelector('h3').textContent.toLowerCase();
+            const description = result.querySelector('p').textContent.toLowerCase();
+    
+            if (title.includes(query) || description.includes(query)) {
+              result.style.display = 'block';
+              hasResults = true;
+            } else {
+              result.style.display = 'none';
+            }
+          });
+    
+          if (!hasResults) {
+            document.getElementById('search-results').innerHTML = `
+              <h2>No results found for "${query}"</h2>
+            `;
+          }
+        }
+      });
+    </script>
+</html>
+
+

@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background: #f5f7fa;
+    color:#333 ;
+  }
+  
+  header {
+    background: #2d2f36;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 30px;
+    align-items: center;
+  }
+  
+  header.index-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  
+  header.index-header .logo {
+    position: absolute;
+    left: 30px;
+  }
+
+  header.index-header .login{
+    position: absolute;
+    right: 80px;
+    cursor: pointer;
+  }
+
+  
+  header.index-header .profile {
+    position: absolute;
+    right: 30px;
+  }
+  
+  .logo {
+    font-size: 1.8em;
+    font-weight: bold;
+  }
+  
+  .search-bar {
+    padding: 8px;
+    width: 300px;
+    border-radius: 5px;
+    border: none;
+    justify-content: center;
+  }
+  
+  .profile {
+    font-size: 1.5em;
+    cursor: pointer;
+  }
+  
+  main {
+    text-align: center;
+    padding: 40px;
+  }
+  
+  .topic-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+  }
+  
+  .topic {
+    width: 150px;
+    height: 200px; /* Ensure equal height */
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    padding: 15px;
+    cursor: pointer;
+    transition: 0.3s;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .topic:hover {
+    transform: translateY(-5px);
+  }
+  
+  .topic img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain; /* Maintain aspect ratio */
+  }
+  
+  .auth-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: #eef2f5;
+  }
+  
+  .auth-container, .profile-page {
+    max-width: 400px;
+    margin: 80px auto;
+    padding: 20px;
+    background: #f4f4f4;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  .auth-container h2, .profile-page h2 {
+    text-align: center;
+  }
+  .auth-container input,
+  .profile-page input {
+    width: 100%;
+    padding: 10px;
+    margin: 9px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+  }
+  .auth-container button,
+  .profile-page button {
+    width: 100%;
+    padding: 8px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .auth-container button:hover,
+  .profile-page button:hover {
+    background-color: #0056b3;
+  }
+  
+  button,
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+  }
+
+/* Profile Page Styling */
+.profile-page {
+  max-width: 600px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #f4f4f4;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.profile-card {
+  padding: 20px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.profile-card h2 {
+  margin-bottom: 20px;
+}
+
+.profile-card input,
+.profile-card button {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 6px;
+  border: 1px solid #ccc;
+}
+
+.profile-card button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.profile-card button:hover {
+  background-color: #0056b3;
+}
+
+.profile-picture {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  margin: 20px 0;
+  object-fit: cover;
+}
+
+.back-button {
+  background: #ddd;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.back-button:hover {
+  background: #bbb;
+}
+.Theory {
+  justify-content: center;
+  border: 2px solid #161515;       /* Green border */
+  border-radius: 10px;             /* Rounded corners */
+  padding: 20px;                   /* Space inside the box */
+  margin: 20px auto;               /* Space around the box */
+  width: 80%;                      /* Width of the box */
+  background-color: #f9f9f9;       /* Light background */
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);  /* Soft shadow */
+}
+
+.topic-content {
+  line-height: 1.8; /* Increases line spacing */
+  text-align: justify; /* Justifies the text */
+  margin: 20px; /* Adds space around the content */
+  padding: 15px; /* Adds inner spacing */
+  background-color: #f9f9f9; /* Optional: Light background for better readability */
+  border-radius: 8px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Subtle shadow for better aesthetics */
+}
+
+
